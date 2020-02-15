@@ -17,6 +17,6 @@ for s in range(1, 10):
                     for o in range(10):
                         six = s*100+i*10+x
                         trois = t*10000+r*1000+o*100+i*10+s
-                        if six**2 == trois:
+                        if six**2 == trois and s!=i!=x!=t!=r!=o:
                             print(trois)
                             break
