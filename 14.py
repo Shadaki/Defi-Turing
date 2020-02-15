@@ -23,17 +23,16 @@ Pour quel nombre de départ inférieur à 1'500'000 obtient-on la plus longue su
 Il y a deux solutions, donner la plus petite.
 """
 
-longueur = 0
-nombre = 0
-for num in range(1, 1500000):
-    n = num
-    lon = 0
-    while n != 1:
-        if n % 2 == 0:
-            n //= 2
-        else:
-            n = n*3+1
-        lon += 1
-    if lon > longueur:
-        nombre = num
-print(num)
+maxi=0
+maxn=0
+for n in range(1,1500000):
+    n2=n
+    i=0
+    while n!=1:
+        if n%2==0: n//=2
+        else: n=n*3+1
+        i+=1
+    if i>maxi:
+        maxi=i
+        maxn=n2
+print(maxn)
